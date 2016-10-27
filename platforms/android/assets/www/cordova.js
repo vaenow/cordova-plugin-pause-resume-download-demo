@@ -1,5 +1,5 @@
 // Platform: android
-// c517ca811b4948b630e0b74dbae6c9637939da24
+// d403ce434788ffe1937711d6ebcbcc837fcbcb14
 /*
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
@@ -19,7 +19,7 @@
  under the License.
 */
 ;(function() {
-var PLATFORM_VERSION_BUILD_LABEL = '5.1.1';
+var PLATFORM_VERSION_BUILD_LABEL = '5.2.2';
 // file: src/scripts/require.js
 
 /*jshint -W079 */
@@ -2083,7 +2083,7 @@ utils.clone = function(obj) {
 
     retVal = {};
     for(i in obj){
-        if(!(i in retVal) || retVal[i] != obj[i]) {
+        if((!(i in retVal) || retVal[i] != obj[i]) && typeof obj[i] != 'undefined') {
             retVal[i] = utils.clone(obj[i]);
         }
     }

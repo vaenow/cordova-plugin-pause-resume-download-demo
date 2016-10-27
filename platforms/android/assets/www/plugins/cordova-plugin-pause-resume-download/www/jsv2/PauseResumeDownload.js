@@ -1,4 +1,5 @@
 cordova.define("cordova-plugin-pause-resume-download.PauseResumeDownload", function(require, exports, module) {
+/*jshint -W030 */
 /**
  ***********************************工具方法***********************************
  */
@@ -40,7 +41,7 @@ function _bind(scope, fn) {
 
 function PRD(option) {
     option = option || {};
-    this.disk = option.disk || cordova.file.externalRootDirectory;
+    this.disk = option.disk || cordova.file.dataDirectory;
     this.repeatNum = option.repeatNum || 10;
     this.percent = 0.00;
     this.verbose = option.verbose || false;
@@ -262,4 +263,5 @@ function errorHandler(e) {
 
 
 module&&(module.exports = PRD);
+
 });

@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<html lang="zh-CN">
     <head>
         <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
@@ -31,18 +31,48 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <title>PRD - Demo</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+      <br><br><br>
+      <div style="
+              display: -webkit-box;   
+              display: -moz-box;   
+              display: -ms-flexbox;   
+              display: -webkit-flex;   
+              display: flex;   
+              -webkit-box-align: center;   
+                 -moz-box-align: center;   
+                 -ms-flex-align: center;   
+              -webkit-align-items: center;   
+                      align-items: center;   
+              -webkit-box-pack: center;   
+                 -moz-box-pack: center;   
+                 -ms-flex-pack: center;   
+              -webkit-justify-content: center;   
+                      justify-content: center;    
+              -webkit-flex-direction: column;   
+                      flex-direction: column;
+        ">
+            <textarea id="url" style="height: 150px; width: 50%; padding: 5px;">http://dldir1.qq.com/qqfile/qq/QQ8.4/18380/QQ8.4.exe</textarea>
+            <br>
+            
+            <div class="progress" style="width:50%">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;" id='progress'>
+                0%
+              </div>
             </div>
-        </div>
+        
+            <button type="button" class="btn btn-primary btn-lg" id='download' style="width:50%;">开始断点续下载</button>
+            <br>
+            <button type="button" class="btn btn-danger btn-lg" id='abort' style="width:50%;">中断下载 </button>
+            
+      </div>
+      </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
